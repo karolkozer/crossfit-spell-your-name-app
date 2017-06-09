@@ -1,0 +1,244 @@
+/****************************************************
+** BASIC SETUP **
+****************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/Background-Crossfit.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Viga', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/****************************************************
+** CROSSFIT LOGO **
+****************************************************/
+.logo {
+    width: 395px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.logo img {
+    width: 100%;
+}
+
+
+/****************************************************
+** CROSSFIT BOX **
+****************************************************/
+.crossfit-box {
+    width: 500px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/****************************************************
+** INPUT BOX **
+****************************************************/
+.name-input , .add-btn {
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 2px solid #CD5E00;
+    line-height: 145%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 130%;
+    outline: none;
+    display: inline-block;
+}
+
+.input-box {
+    width: 100%;
+}
+
+.name-input {
+    width: 75%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+/* ------------------ BUTTON -------------------*/
+.add-btn {
+    width: 22%;
+    float: right;
+    padding: 10px;
+    -webkit-transition: border 0.2s;
+    transition: border 0.2s;
+}
+
+.add-btn:hover {
+    border: 2px solid rgb(234, 234, 234);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Viga', sans-serif;
+    color: #fff;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'Viga', sans-serif;
+    color: #fff;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'Viga', sans-serif;
+    color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Viga', sans-serif;
+    color: #fff;
+}
+
+/****************************************************
+** EXERCISE-BOX **
+****************************************************/
+.exercise-box {
+    width: 500px;
+    position: absolute;
+    top: 130%;
+}
+
+.exercise-list {
+    background-color: rgba(255, 120, 0, 0.69);
+    padding: 12px;
+    font-size: 130%;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    opacity: 0;
+    display: none;
+}
+
+
+.letters, .exercise, .count {
+    display: inline-block;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.letters {
+    float: left;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.count {
+    float: right;
+    margin-right: 30px;
+}
+
+/****************************************************
+** STOPWATCH **
+****************************************************/
+.timer {
+    opacity: 0;
+    width: 380px;
+    position: absolute;
+    font-size: 180%;
+    color: #fff;
+    top: 14%;
+    left: 51%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+
+/****************************************************
+** ANIMATIONS **
+****************************************************/
+
+@-webkit-keyframes logos{
+    from{
+       -webkit-transform: translate(-50%, -50%) scale(1);
+       transform: translate(-50%, -50%) scale(1);
+    }
+    
+    to{
+        -webkit-transform: translate(-50%, -130%) scale(0.4);
+        transform: translate(-50%, -130%) scale(0.4);
+    }
+}
+
+
+@keyframes logos{
+    from{
+       -webkit-transform: translate(-50%, -50%) scale(1);
+       transform: translate(-50%, -50%) scale(1);
+    }
+    
+    to{
+        -webkit-transform: translate(-50%, -130%) scale(0.4);
+        transform: translate(-50%, -130%) scale(0.4);
+    }
+}
+
+
+@-webkit-keyframes list {
+    from{opacity: 0; -webkit-transform: scale(0.4); transform: scale(0.4);}
+    to{opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+}
+
+
+@keyframes list {
+    from{opacity: 0; -webkit-transform: scale(0.4); transform: scale(0.4);}
+    to{opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+}
+
+
+@-webkit-keyframes timer{
+    from{
+        opacity: 0;
+        -webkit-transform: translateX(-50%) scale(0.4);
+        transform: translateX(-50%) scale(0.4);
+    }
+    
+    to{
+        opacity: 1;
+        -webkit-transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+
